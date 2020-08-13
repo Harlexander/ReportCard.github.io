@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student Report Card</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+        <div class="jumbotron form" id="form">
+            <h2>WELCOME!</h2>
+            <p>Fill the form correctly...</p>
+            <form class="form-inline">
+                <div class="form-group-sm">
+                <label for="studentname">Student's Name  : </label> <input type="text" name="student" id="student"class="form-control" style="margin: 0px 15px 0px 15px;">
+                <label for="class">Grade : </label> <select class="form-control " id="grade" style="margin: 0px 15px 0px 15px;">
+                    <option>Jss 1</option>
+                    <option>Jss 2</option>
+                    <option>Jss 3</option>
+                    <option>Sss 1</option>
+                    <option>Sss 2</option>
+                    <option>Sss 3</option>
+                </select><br>
+                <br>
+                <label for="department">Department : </label> <select class="form-control " id="dep" style="margin: 0px 15px 0px 15px;">
+                    <option>Science</option>
+                    <option>Commercial</option>
+                    <option>Arts</option>
+                </select>
+                <label for="sex">Sex : </label>
+                <select name="sex" id="sex" class="form-control" style="margin: 0px 15px 0px 15px;">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select><br><br>
+                <label for="Teacher">Teacher's Name : </label> <input type="text" class="form-control text-uppercase" id="teacher" style="margin: 0px 15px 0px 15px;">
+                <label for="session">Session : </label><select class="form-control " id="session" style="margin: 0px 15px 0px 15px;">
+                    <option>2019/2020</option>
+                    <option>2018/2019</option>
+                    <option>2017/2018</option>
+                </select>
+                </div>
+            </form>
+            <br><br>
+            <button class="btn btn-success" id="submit" onclick="myFunction()">Prepare Report Card</button>
+        </div>
+        <div id="report">
+        <div class="header text-center">
+                <img src="../img/LogoMakr_8T9VAX.png" alt="brand" class="brand"> <h2> <b>Effulgente & Favitop Academy</b></h2> 
+                <h4 style="line-height: 5px;">P.O BOX 1563, ikorodu highway, Ikorodu, Lagos </h4>
+            </div>
+            <div class="container">
+            <div class="jumbotron info text-uppercase">
+                <h4 class="text-center"><u> Personal Information</u></h4>
+                <p class="col-sm-6">Full Name : <span id="fullname"></span> </p>
+                <p>Department : <span id="dept"></span></p>
+                <p class="col-sm-6">Grade :  <span id="class"></span></p>
+                <p>Sex : <span id="gender"></span></p>
+                <p class="col-sm-6">Teacher's Name : <span id="teachername"></span></p>
+                <p>Session : <span id="term" ></span></p>
+
+            </div>
+        </div> 
+        <div class="container conduct">
+            <h4>Special Reports During The Term<b>(CONDUCT)</b></h4>
+            <table class="table table-striped">
+                <tr class="success">
+                    <th>Deligence</th>
+                    <th>Cleaniness</th>
+                    <th>Vocal Skill</th>
+                </tr>
+                <tr>
+                    <td>
+                    <select name="respect" id="conduct" class="form-control">
+                        <option>Perfect</option>
+                        <option>Good</option>
+                        <option>Bad</option>
+                    </select>
+                    </td>
+                    <td>
+                        <select name="clean" id="conduct" class="form-control">
+                            <option>Perfect</option>
+                            <option>Good</option>
+                            <option>Bad</option>
+                        </select>
+                    </td>
+                   <td>
+                    <select name="social" id="conduct" class="form-control">
+                        <option>Perfect</option>
+                            <option>Good</option>
+                            <option>Bad</option>
+                    </select>
+                   </td>
+                </tr>
+                <tr class="success">
+                    <th>Attitude to work</th>
+                    <th>Punctuality</th>
+                    <th>Creativity</th>
+                </tr>
+                <tr>
+                    <td>
+                    <select name="respect" id="conduct" class="form-control">
+                        <option>Perfect</option>
+                        <option>Good</option>
+                        <option>Bad</option>
+                    </select>
+                    </td>
+                    <td>
+                        <select name="clean" id="conduct" class="form-control">
+                            <option>Perfect</option>
+                            <option>Good</option>
+                            <option>Bad</option>
+                        </select>
+                    </td>
+                   <td>
+                    <select name="social" id="conduct" class="form-control">
+                        <option>Perfect</option>
+                        <option>Good</option>
+                        <option>Bad</option>
+                    </select>
+                   </td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <h4>Extra-Curriculum Activities</h4>
+            <table class="table table-striped table-bordered table-hover">
+                <tr class="success">
+                    <th colspan="3" class="text-center">Sports And Games</th>
+                    <th colspan="3" class="text-center">Social Activities</th>
+                </tr>
+                <div>
+                  <tr>
+                    <td><input type="checkbox" id="football" value="football" class="checkbox"><label for="football">Football</label></td>
+                    <td><input type="checkbox" id="gymnastic" value="football" class="checkbox"><label for="gymnastic">Gymnastics</label></td>
+                    <td><input type="checkbox" id="vb" value="football" class="checkbox"><label for="volleyball">Volleyball</label></td>
+                    <td><input type="checkbox" id="debate" value="debate" class="checkbox"><label for="debate">Debate</label></td>
+                    <td><input type="checkbox" id="quiz" value="quiz" class="checkbox"><label for="quiz">Quiz</label></td>
+                    <td><input type="checkbox" id="cnb" value="cnb" class="checkbox"><label for="cnb">Club & Society</label></td>
+                </tr>  
+                </div>
+                
+                <tr>
+                    <td><input type="checkbox" id="Chess" value="football" class="checkbox"><label for="chess">Chess</label></td>
+                    <td><input type="checkbox" id="football" value="football" class="checkbox"><label for="football">Monopoly</label></td>
+                    <td><input type="checkbox" id="football" value="football" class="checkbox"><label for="football">Others</label></td>
+                    <td><input type="checkbox" id="football" value="football" class="checkbox"><label for="football">Music Group</label></td>
+                    <td><input type="checkbox" id="football" value="football" class="checkbox"><label for="football">School Theater</label></td>
+                    <td><input type="checkbox" id="football" value="football" class="checkbox"><label for="football">Others</label></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%;">
+                            </div>
+                        </div>
+                    </td>
+                    <td colspan="3">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 70%;">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <h4>Performance in Each Subject</h4>
+            <table class="table table-bordered">
+                <tr class="active">
+                    <th>Subjects</th>
+                    <th  class="text-right test">Cont. Assessent (40)</th>
+                    <th class="text-right test">Mid-Test (60)</th>
+                    <th class="text-right test">Examination (100)</th>
+                    <th class="text-right ">OverAll/ Aggregate</th>
+                    <th>Performance</th>
+                </tr>
+                <tr>
+                    <td class="active">English Language</td>
+                    <td><input type="text" id="ca1" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt1" class="text-right"maxlength="2"></td>
+                    <td><input type="text" id="exam1" class="text-right"></td>
+                    <td><span id="aggregate1"></span></td>
+                    <td id="performance1"></td>
+                    
+                </tr>
+                <tr>
+                    <td class="active">Mathe Matics</td>
+                    <td><input type="text" id="ca2" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt2" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="exam2" class="text-right"></td>
+                    <td><span id="aggregate2" class="text-right"></span></td>
+                    <td id="performance2"></td>
+                </tr>
+                <tr>
+                    <td class="active">Computer Science</td>
+                    <td><input type="text" id="ca3" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt3" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="exam3" class="text-right"></td>
+                    <td><span id="aggregate3"></span></td>
+                    <td id="performance3"></td>
+                </tr>
+                <tr>
+                    <td class="active">Economics</td>
+                    <td><input type="text" id="ca4" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt4" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="exam4" class="text-right"></td>
+                    <td><span id="aggregate4"></span></td>
+                    <td id="performance4"></td>
+                </tr>
+                <tr>
+                    <td class="active">Literature-in-English</td>
+                    <td><input type="text" id="ca5" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt5" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="exam5" class="text-right"></td>
+                    <td><span id="aggregate5"></span></td>
+                    <td id="performance5"></td>
+                </tr>
+                <tr>
+                    <td class="active">Total</td>
+                    <td><span id="totalscoreca"></span></td>
+                    <td><span id="totalscoremt"></span></td>
+                    <td><span id="totalscoreexam"></span></td>
+                    <td><span id="totalscore"></span></td>
+                    <td id="performance6"></td>
+                </tr>
+            </table>
+            <div class="container">
+                <h2 class="text-center"><b>Remarks</b></h4>
+                <div class="form-group">
+                <label for="tremark" style="font-size: 30px;">Teacher's Remark : </label>
+                <input type="text" name="tremark" id="remark">
+                </div>
+                <div class="form-group">
+                <label for="premark" style="font-size: 30px;">Principal's Remark : </label>
+                <input type="text" name="premark" id="remark">
+                </div>
+
+                <div class="signature">
+                    <div class="col-sm-6">
+                    <input type="text" id="signature" style="float: left;"><br><br>
+                     <b>Teacher's signature</b>
+                    </div>
+                    <div class="col-sm-6">
+                        <div style="float: right;">
+                    <input type="text" id="signature" ><br><br>
+                    <b>Principal Signatures</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="window.print()" class="btn-info">Print this page</button>
+        <div class="footer text">
+            <pre class="text-left">N.B The school resumption date will be attach to the emails sent to the parents... <span style="float: right;"">&copy; In God We Trust.</span> </pre>
+        </div>
+        </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

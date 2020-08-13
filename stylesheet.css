@@ -1,0 +1,54 @@
+.info p{
+    font-size: 15px;
+    font-weight: bold;
+}
+.info span{
+    margin-left: 40px;
+}
+.form {
+    width: 550px;
+    text-align: center;
+    padding: 30px 0px 40px 0px;
+    margin: 100px auto 100px auto ;
+    display: none;
+}
+.header{
+    margin: 5px 0px 30px 0px;
+}
+.brand{
+    height: 50px;
+}
+.info{
+    padding: 2px 10px 10px 10px;
+}
+.right{
+    text-align: left;
+}
+.checkbox{
+    width: 30px;
+    float: right;
+}
+td{
+    font-size: 20px;
+}
+.test{
+    width: 200px;
+}
+input{
+    width: 100%;
+    border: hidden;
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+}
+#remark{
+    border-bottom: 2px solid black;
+}
+#signature{
+    border-bottom: 2px solid black;
+    width: 200px;
+}
+.signature{
+    margin-top: 40px;
+}
