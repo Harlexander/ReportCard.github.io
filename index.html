@@ -150,20 +150,6 @@
                     <td><input type="checkbox" id="football" value="football" class="checkbox"><label for="football">School Theater</label></td>
                     <td><input type="checkbox" id="football" value="football" class="checkbox"><label for="football">Others</label></td>
                 </tr>
-                <tr>
-                    <td colspan="3">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 60%;">
-                            </div>
-                        </div>
-                    </td>
-                    <td colspan="3">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 70%;">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
             </table>
         </div>
         <div class="container">
@@ -179,54 +165,58 @@
                 </tr>
                 <tr>
                     <td class="active">English Language</td>
-                    <td><input type="text" id="ca1" class="text-right" maxlength="2"></td>
-                    <td><input type="text" id="mt1" class="text-right"maxlength="2"></td>
-                    <td><input type="text" id="exam1" class="text-right"></td>
+                    <td><input type="text" id="ca1" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt1" class="grade text-right"maxlength="2"></td>
+                    <td><input type="text" id="exam1" class="grade text-right" maxlength="3"></td>
                     <td><span id="aggregate1"></span></td>
                     <td id="performance1"></td>
                     
                 </tr>
                 <tr>
                     <td class="active">Mathe Matics</td>
-                    <td><input type="text" id="ca2" class="text-right" maxlength="2"></td>
-                    <td><input type="text" id="mt2" class="text-right" maxlength="2"></td>
-                    <td><input type="text" id="exam2" class="text-right"></td>
+                    <td><input type="text" id="ca2" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt2" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="exam2" class="grade text-right"></td>
                     <td><span id="aggregate2" class="text-right"></span></td>
                     <td id="performance2"></td>
                 </tr>
                 <tr>
                     <td class="active">Computer Science</td>
-                    <td><input type="text" id="ca3" class="text-right" maxlength="2"></td>
-                    <td><input type="text" id="mt3" class="text-right" maxlength="2"></td>
+                    <td><input type="text" id="ca3" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt3" class="grade text-right" maxlength="2"></td>
                     <td><input type="text" id="exam3" class="text-right"></td>
                     <td><span id="aggregate3"></span></td>
                     <td id="performance3"></td>
                 </tr>
                 <tr>
                     <td class="active">Economics</td>
-                    <td><input type="text" id="ca4" class="text-right" maxlength="2"></td>
-                    <td><input type="text" id="mt4" class="text-right" maxlength="2"></td>
-                    <td><input type="text" id="exam4" class="text-right"></td>
+                    <td><input type="text" id="ca4" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt4" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="exam4" class="grade text-right"></td>
                     <td><span id="aggregate4"></span></td>
                     <td id="performance4"></td>
                 </tr>
                 <tr>
                     <td class="active">Literature-in-English</td>
-                    <td><input type="text" id="ca5" class="text-right" maxlength="2"></td>
-                    <td><input type="text" id="mt5" class="text-right" maxlength="2"></td>
-                    <td><input type="text" id="exam5" class="text-right"></td>
+                    <td><input type="text" id="ca5" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="mt5" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="exam5" class="grade text-right"></td>
                     <td><span id="aggregate5"></span></td>
                     <td id="performance5"></td>
                 </tr>
                 <tr>
                     <td class="active">Total</td>
-                    <td><span id="totalscoreca"></span></td>
-                    <td><span id="totalscoremt"></span></td>
-                    <td><span id="totalscoreexam"></span></td>
-                    <td><span id="totalscore"></span></td>
-                    <td id="performance6"></td>
+                    <td><b><span id="totalscoreca"></span></b></td>
+                    <td><b><span id="totalscoremt"></span></b></td>
+                    <td><b><span id="totalscoreexam"></span></b></td>
+                    <td><b><span id="totalscore"></span></b></td>
+                    <td id="performancetotal"><button id="button" class="btn">Calculate</button></td>
                 </tr>
             </table>
+            <div class="alert alert-danger">
+                <strong>Warning!</strong> This table cannot be editted after clicking, Check the content again
+              </div>
+
             <div class="container">
                 <h2 class="text-center"><b>Remarks</b></h4>
                 <div class="form-group">
