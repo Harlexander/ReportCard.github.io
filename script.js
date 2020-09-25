@@ -93,8 +93,29 @@ function myFunction() {
         showHide("button", "none")
       })
   }
-    
-        
+    // add new subject to the table
+    const addButton = document.querySelector("#add").addEventListener('click', ()=>{
+         addTable();
+    });
+
+let table = document.querySelector("#tb");
+    const addTable = () => { 
+      let roll = table.insertRow(6);
+      let [cell1, cell2, cell3, cell4, cell5, cell6] = [roll.insertCell(0), roll.insertCell(1), roll.insertCell(2), roll.insertCell(3), roll.insertCell(4), roll.insertCell(5)];
+      let subjects = document.querySelector("#subject").value;
+      cell1.innerHTML = `${subjects}   <span class="delete"> x </span>` ;
+      cell1.classList.add("active");
+      
+      document.querySelector(".delete").onclick = function(){
+      let i = this.parentNode.parentNode.rowIndex;
+        document.getElementById("tb").deleteRow(i);
+    }
+      cell2.innerHTML = `<input type="text" id="ca1" class="ca grade text-right" maxlength="2">`;
+      cell3.innerHTML = `<input type="text" id="mt1" class="grade text-right"maxlength="2">`;
+      cell4.innerHTML = `<input type="text" id="exam1" class="grade text-right" maxlength="3">`;
+    } 
+      
+
         
 
 const storage = (key, value) => {
