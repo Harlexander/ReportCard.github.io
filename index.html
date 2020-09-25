@@ -13,7 +13,7 @@
         <div class="jumbotron form" id="form">
             <h2>WELCOME!</h2>
             <p>Fill the form correctly...</p>
-            <form class="form-inline">
+            <form class="form-inline" id="form">
                 <div class="form-group-sm">
                 <label for="studentname">Student's Name  : </label> <input type="text" name="student" id="student"class="form-control" style="margin: 0px 15px 0px 15px;">
                 <label for="class">Grade : </label> <select class="form-control " id="grade" style="margin: 0px 15px 0px 15px;">
@@ -153,8 +153,15 @@
             </table>
         </div>
         <div class="container">
-            <h4>Performance in Each Subject</h4>
-            <table class="table table-bordered">
+            <h4>Performance in Each Subject <select name="subject" id="subject" style="width: 90px; font-size: 15px;" >
+                <option value="Further math">Further math</option>
+                <option value="Civic Education">Civic Education</option>
+                <option value="Book Keeping">Book Keeping</option>
+                <option value="Food & Nut">Food & Nut</option>
+                <option value="Music">Music</option>
+                <option value="Fine art">Fine art</option>
+            </select>  <button style="width: 40px;" class="btn" id="add"><b>+</b></button>  </h4>
+            <table class="table table-bordered" id="tb">
                 <tr class="active">
                     <th>Subjects</th>
                     <th  class="text-right test">Cont. Assessent (40)</th>
@@ -165,7 +172,7 @@
                 </tr>
                 <tr>
                     <td class="active">English Language</td>
-                    <td><input type="text" id="ca1" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="ca1" class="ca grade text-right" maxlength="2"></td>
                     <td><input type="text" id="mt1" class="grade text-right"maxlength="2"></td>
                     <td><input type="text" id="exam1" class="grade text-right" maxlength="3"></td>
                     <td><span id="aggregate1"></span></td>
@@ -174,7 +181,7 @@
                 </tr>
                 <tr>
                     <td class="active">Mathe Matics</td>
-                    <td><input type="text" id="ca2" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="ca2" class="ca grade text-right" maxlength="2"></td>
                     <td><input type="text" id="mt2" class="grade text-right" maxlength="2"></td>
                     <td><input type="text" id="exam2" class="grade text-right"></td>
                     <td><span id="aggregate2" class="text-right"></span></td>
@@ -182,7 +189,7 @@
                 </tr>
                 <tr>
                     <td class="active">Computer Science</td>
-                    <td><input type="text" id="ca3" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="ca3" class="ca grade text-right" maxlength="2"></td>
                     <td><input type="text" id="mt3" class="grade text-right" maxlength="2"></td>
                     <td><input type="text" id="exam3" class="text-right"></td>
                     <td><span id="aggregate3"></span></td>
@@ -198,7 +205,7 @@
                 </tr>
                 <tr>
                     <td class="active">Literature-in-English</td>
-                    <td><input type="text" id="ca5" class="grade text-right" maxlength="2"></td>
+                    <td><input type="text" id="ca5" class="ca grade text-right" maxlength="2"></td>
                     <td><input type="text" id="mt5" class="grade text-right" maxlength="2"></td>
                     <td><input type="text" id="exam5" class="grade text-right"></td>
                     <td><span id="aggregate5"></span></td>

@@ -12,6 +12,12 @@
     margin: 100px auto 100px auto ;
     display: none;
 }
+.delete {
+    float: right;
+    cursor: pointer;
+    /* display: none; */
+    color: red;
+}
 .header{
     margin: 5px 0px 30px 0px;
 }
